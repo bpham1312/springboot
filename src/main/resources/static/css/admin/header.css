@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#header{
+    display: block;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#header .logo{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 9%;
+}
+
+#header .user-name{
+    float: right;
+    margin-right: 2%;
+    font-size: 16px;
+    line-height: 42px;
+}
+
+#header .user-name:hover .sub-nav-menu  {
+    display: block;
+}
+
+.user-name > i{
+    padding: 0 8px;
+}
+
+.user-name .sub-nav-menu{
+    background-color: #000;
+    position: absolute;
+    top:26px;
+    right: 2%;
+    min-width: 200px;
+    margin-top: 16px;
+    display: none;
+    z-index: 1;
+}
+
+.sub-nav-menu > a{
+    display: block;
+    padding-left: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+}
+
+.sub-nav-menu > a:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    color: #000;
+}
+

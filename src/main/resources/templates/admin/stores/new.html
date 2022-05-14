@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+data-layout-decorate="~{page-layout/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>New Stores</title>
+</head>
+<body>
+<div id="body" layout:fragment="content">
+	<div id="content">
+		<div class="content-header">
+			<h1>new Stores</h1>
+		</div>
+		<form method= "post" action="/admin/stores/update" >
+			<div class="form-container">
+				<div class="form-input">
+					<label for="quantity">Quantity:</label>
+					<input type="text" id="quantity" class="JS-fade" name="quantity" placeholder="Quantity">
+				</div>
+				<div class="form-input">
+					<label for="price">Price:</label>
+					<input type="text" id="price" class="JS-fade" name="price" placeholder="Price">
+				</div>
+				<div class="btn-container">
+					<a class="btn-back" href="/admin/stores" th:href="@{/admin/stores}">cancel</a>
+					<button class="btn-submit" type="submit">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

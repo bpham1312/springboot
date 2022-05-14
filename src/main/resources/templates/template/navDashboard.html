@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Nav Dashboard</title>
+<!--
+<link rel="stylesheet" href="../../static/css/admin/nav.css" th:href="@{/css/admin/nav.css}">  
+-->
+</head>
+<body>
+<div id="list-nav" th:fragment="nav">
+		<div class="head-list">
+            <h1 class="">dash board</h1>
+        </div>
+		<ul class="nav">
+			<li>Species
+				<ul class="sub-nav">
+					<a href="#"><li>List</li></a>
+					<a href="#"><li>New</li></a>
+				</ul>
+			</li>
+			<li>cats
+				<ul class="sub-nav">
+					<a href="#"><li>List</li></a>
+					<a href="#"><li>New</li></a>
+				</ul>
+			</li>
+			<li>store
+				<ul class="sub-nav">
+					<a href="#"><li>List</li></a>
+					<a href="#"><li>New</li></a>
+				</ul>
+			</li>
+		</ul>
+	</div>
+<!--
+<script
+	src="../../static/js/listNav.js" th:src="@{/js/listNav.js}">
+</script>
+-->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+data-layout-decorate="~{page-layout/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>List Stores</title>
+</head>
+<body>
+	<div id="body" layout:fragment="content">
+		<div id="content">
+		<div class="content-header">
+			<h1>List Stores</h1>
+		</div>
+		<div class="new-icon">
+			<a href="/admin/cats/update" th:href="@{/admin/cats/update}" class=""><i class="ti-plus">New</i></a>
+		</div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>cat name</th>
+				<th>quantity</th>
+				<th>price</th>
+				<th>actions</th>	
+			</tr>		
+				<tr th:each="s : ${listStores}">
+				<td th:text="${s.id}"></td>
+				<td th:text="${s.cats}?${s.cats.name}"></td>
+				<td th:text="${s.quantity}"></td>
+				<td th:text="${s.price}"></td>
+				<td><a th:href="@{/admin/stores/delete(id=${s.id})}" class=""><i class="ti-trash">Delete</i></a>
+					<a th:href="@{/admin/stores/edit(id=${s.id})}" class=""><i class="ti-pencil">Edit</i></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</body>
+</html>

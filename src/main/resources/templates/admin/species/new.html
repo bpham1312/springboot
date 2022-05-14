@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+data-layout-decorate="~{page-layout/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>New Species</title>
+</head>
+<body>
+<div id="body" layout:fragment="content">
+	<div id="content">
+		<div class="content-header">
+			<h1>new species</h1>
+		</div>
+		<form method= "post" action="/admin/species/update" >
+			<div class="form-container">
+				<div class="form-input">
+					<label for="name">Species name:</label>
+					<input type="text" id="name" class="JS-fade" name="name" placeholder="Name">
+				</div>
+				<div class="btn-container">
+					<a class="btn-back" href="/admin/species" th:href="@{/admin/species}">cancel</a>
+					<button class="btn-submit" type="submit">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

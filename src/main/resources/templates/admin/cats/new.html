@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+data-layout-decorate="~{page-layout/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>New Cat</title>
+</head>
+<body>
+<div id="body" layout:fragment="content">
+	<div id="content">
+		<div class="content-header">
+			<h1>new Cat</h1>
+		</div>
+		<form method= "post" action="/admin/cats/update" >
+			<div class="form-container">
+				<div class="form-input">
+						<label for="name">Cat name:</label> <input class="JS-fade" type="text" id="name"
+							name="name" placeholder="Name">
+					</div>
+					<div class="form-input">
+						<label for="description">Description:</label>
+						<textarea id="description" class="JS-fade" name="description" rows="5"></textarea>
+					</div>
+					<div class="form-input">
+						<label for="idSpecies">Species name:</label> 
+						<button type="button" class="btn-new" >New</button>
+						<select name="selectSpecies" class="input JS-fade" id="idSpecies">
+							<option th:each="s : ${listSpecies}" th:value="${s.id}" th:text="${s.name}"></option>
+						</select>
+						<input type="text" id="description" class="new" name="new" placeholder="New species">
+					</div>
+					<div class="form-input">
+						<label for="quantity">Quantity:</label>
+						 <input class="JS-fade" type="number" id="quantity" min="1"
+							name="quantity" placeholder="Quantity">
+					</div>
+					<div class="form-input">
+						<label for="price">Price:</label>
+						 <input class="JS-fade" type="number" id="price" min="1"
+							name="price" placeholder="Price">
+					</div>
+				<div class="btn-container">
+					<a class="btn-back" href="/admin/species" th:href="@{/admin/cats}">cancel</a>
+					<button class="btn-submit" type="submit">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+form{
+	overflow: auto;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 6px #ccc;
+    padding: 12px 0;
+}
+
+form .form-container{
+    margin: 0 2%;
+}
+
+.form-container .form-input{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+.JS-fade{
+    display: block !important;
+}
+
+.form-input .btn-new{
+    padding: 5px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    margin-right: 5px;
+    min-width: 60px;
+}
+
+.form-input label{
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+.form-input input,.form-input select,.form-input textarea{
+    padding: 3px;
+    flex-grow: 5;
+    max-width: 350px;
+    width:100%;
+    display: none;
+    
+}
+
+.form-container .btn-container{
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-around;
+
+}
+
+.btn-container .btn-submit{
+    background-color: #000;
+    padding: 3px 6px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    min-height: 25px;
+    min-width: 76px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-container .btn-back{
+    background-color: #000;
+    padding: 3px 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    min-height: 25px;
+    min-width: 76px;
+    display: inline-block;
+}

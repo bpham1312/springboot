@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+data-layout-decorate="~{page-layout/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>List Cats</title>
+</head>
+<body>
+	<div id="body" layout:fragment="content">
+		<div id="content">
+		<div class="content-header">
+			<h1>List cats</h1>
+		</div>
+		<div class="new-icon">
+			<a href="/admin/cats/update" th:href="@{/admin/cats/update}" class=""><i class="ti-plus">New</i></a>
+		</div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>species</th>
+				<th>cat name</th>
+				<th>description</th>
+				<th>quantity</th>
+				<th>unit price</th>
+				<th>actions</th>
+			</tr>		
+			<tr th:each="c : ${listCats}">
+				<td th:text="${c.id}"></td>
+				<td th:text="${c.species}? ${c.species.name} : 'null'"></td>
+				<td th:text="${c.name}"></td>
+				<td th:text="${c.description}"></td>
+				<td th:text="${c.stores}? ${c.stores.quantity} : 'null'"></td>
+				<td th:text="${c.stores}? ${c.stores.price} : 'null'"></td>
+				<td><a th:href="@{/admin/cats/delete(id=${c.id})}" class=""><i class="ti-trash">Delete</i></a>
+					<a th:href="@{/admin/cats/edit(id=${c.id})}" class=""><i class="ti-pencil">Edit</i></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+<meta charset="UTF-8">
+<title>Header Dashboard</title>
+<!--  
+<link rel="stylesheet" href="../../static/fonts/themify-icons/themify-icons.css" th:href="@{/fonts/themify-icons/themify-icons.css}">
+<link rel="stylesheet" href="../../static/css/admin/header.css" th:href="@{/css/admin/header.css}">
+--> 
+</head>
+<body>
+	 <div id="header" th:fragment="header">
+        <img src="../../static/images/logo/cat.png" th:src="@{/images/logo/cat.png}" alt="logo" class="logo">
+        <lable class="user-name"><i class="ti-user"></i>Đăng Nguyên<i class="ti-angle-down"></i>
+            <div class="sub-nav-menu">
+                <a href="#" class="">Thông tin tài khoản</a>
+                <a href="#" class="">Đăng xuất</a>
+            </div>
+        </lable>
+    </div>
+</body>
+</html>

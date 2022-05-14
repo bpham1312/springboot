@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html 
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Layout1</title>
+<link rel="icon" type="image/png"
+	href="../../static/images/logo/cat.png" th:href="@{/images/logo/cat.png}">
+<link rel="stylesheet" href="../../static/css/admin/form.css" th:href="@{/css/admin/form.css}">
+<link rel="stylesheet" href="../../static/fonts/themify-icons/themify-icons.css" th:href="@{/fonts/themify-icons/themify-icons.css}">
+<link rel="stylesheet" href="../../static/css/admin/header.css" th:href="@{/css/admin/header.css}">
+<link rel="stylesheet" href="../../static/css/admin/nav.css" th:href="@{/css/admin/nav.css}">
+<link rel="stylesheet" href="../../static/css/admin/body-content.css" th:href="@{/css/admin/body-content.css}">
+<link rel="stylesheet" href="../../static/css/admin/form.css" th:href="@{/css/admin/body-content.css}">
+</head>
+<body>
+	<div id="container">
+		<header th:replace="template/headerDashboard :: header"></header>
+		<nav th:replace="template/navDashboard :: nav"></nav>
+		<main>
+			<div layout:fragment="content"></div>
+		</main>
+
+	</div>
+<script src="../../static/js/listNav.js" th:src="@{/js/listNav.js}"></script>
+<script src="../../static/js/form.js" th:src="@{/js/form.js}"></script>
+</body>
+</html>
